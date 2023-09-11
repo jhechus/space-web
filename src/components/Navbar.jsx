@@ -2,6 +2,8 @@ import BurguerMenu from '../assets/shared/icon-hamburger.svg'
 import CloseMenu from '../assets/shared/icon-close.svg'
 import { useState } from 'react'
 
+import { Link } from 'react-router-dom'
+
 export default function Navbar() {
 
     const [menuClicked, setmenuClicked] = useState(false)
@@ -27,17 +29,21 @@ export default function Navbar() {
             sm:py-10 sm:pr-9
             `}>
                 <li className='text-TextW cursor-pointer text-[16px] font-bold leading-normal tracking-[2.7px] sm:text-sm lg:flex lg:gap-1'>
-                
-                    <span className='sm:hidden lg:flex'>00</span>
-                    <span className='text-[16px] font-normal leading-normal tracking-[2.7px] sm:text-sm sm:tracking-[2.3px] lg:tracking-[2.7px]'> HOME </span>
-                
+                    <Link to={'/'}>
+                        <div className=' lg:flex lg:items-center lg:gap-[5px]'>
+                            <span className='sm:hidden lg:flex'>00</span>
+                            <span className='text-[16px] font-normal leading-normal tracking-[2.7px] sm:text-sm sm:tracking-[2.3px] lg:tracking-[2.7px]'> HOME </span>
+                        </div>
+                    </Link>
                 </li>
 
                 <li className='text-TextW cursor-pointer text-[16px] font-bold leading-normal tracking-[2.7px] sm:text-sm lg:flex lg:gap-1'>
-                    
-                    <span className='sm:hidden lg:flex'>01</span>
-                    <span className='text-[16px] font-normal leading-normal tracking-[2.7px] sm:text-sm sm:tracking-[2.3px] lg:tracking-[2.7px]'> DESTINATION </span>
-                    
+                    <Link to={'/destinations'}> 
+                        <div className=' lg:flex lg:items-center lg:gap-[5px]'>
+                            <span className='sm:hidden lg:flex'>01</span>
+                            <span className='text-[16px] font-normal leading-normal tracking-[2.7px] sm:text-sm sm:tracking-[2.3px] lg:tracking-[2.7px]'> DESTINATION </span>
+                        </div>
+                    </Link>
                 </li>
 
                 <li className='text-TextW cursor-pointer text-[16px] font-bold leading-normal tracking-[2.7px] sm:text-sm lg:flex lg:gap-1'>
