@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import Home from './assets/Routes/Home'
 import Destinations from './assets/Routes/Destinations'
+import Crew from './assets/Routes/Crew'
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
     path: '/destinations',
     element: < Destinations />
   },  
+  {
+    path: '/crew',
+    element: < Crew />
+  },
 
 ])
 
