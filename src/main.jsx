@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './assets/Routes/Home'
 import Destinations from './assets/Routes/Destinations'
 import Crew from './assets/Routes/Crew'
+import Technology from './assets/Routes/Technology'
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,10 @@ const router = createBrowserRouter([
     path: '/crew',
     element: < Crew />
   },
-
+  {
+    path: '/technology',
+    element: < Technology />
+  },
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
